@@ -1,3 +1,9 @@
+/*	
+*	文件: gluSnake8x8
+*	作者: Tnze
+*	日期: 2018年11月3日
+*	功能: 8*8贪吃蛇的核心代码
+*/
 #include <stdio.h>
 #include <unistd.h>
 
