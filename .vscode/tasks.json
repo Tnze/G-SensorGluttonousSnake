@@ -6,29 +6,70 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "sdcc", //Mac下的编译器
+            "command": "sdcc",
             "args": [
                 "${workspaceRoot}/tnze.c"
             ],
             "options": {
-                "cwd": "${workspaceRoot}/bin/"
+                "cwd": "${workspaceRoot}/bin"
             },
             "problemMatcher": []
         },
         {
-            "label": "download",
+            "label": "build HEX",
             "type": "shell",
-            "command": "${config:python.pythonPath}",
+            "command": "packihx",
             "args": [
-                "/Users/Tnze/Documents/projects/51/tools/stcflash.py", //From https://github.com/laborer/stcflash
-                "--port",
-                "/dev/tty.wchusbserial1410", //Your USB to TTL port
-                "${workspaceRoot}/bin/tnze.ihx"
+                "${workspaceRoot}/bin/tnze.ihx",
+                ">",
+                "${workspaceRoot}/bin/tnze.hex"
             ],
+            "options": {
+                "cwd": "${workspaceRoot}/bin"
+            },
             "problemMatcher": [],
             "dependsOn": [
                 "build"
             ]
+        },
+        {
+            "label": "download",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "/Users/Tnze/Documents/projects/51/tools/stcflash.py",
+                "--port",
+                "/dev/tty.wchusbserial1420",
+                "--lowbaud",
+                "19200",
+                "--protocol",
+                "89",
+                "${workspaceRoot}/bin/tnze.ihx"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}/bin/"
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "build"
+            ]
+        },
+        {
+            "label": "read message",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "/Users/Tnze/Documents/projects/51/tools/stcflash.py",
+                "--port",
+                "/dev/tty.wchusbserial1420",
+                "--lowbaud",
+                "19200"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}/bin/"
+            },
+            "problemMatcher": [],
+            "dependsOn": []
         }
     ]
 }
