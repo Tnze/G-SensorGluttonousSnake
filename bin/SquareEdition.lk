@@ -1,5 +1,5 @@
 -muwx
--i tnze.ihx
+-i SquareEdition.ihx
 -M
 -Y
 -b HOME = 0x0000
@@ -14,6 +14,6 @@
 -l libint
 -l liblong
 -l libfloat
-tnze.rel
+SquareEdition.rel
 
 -e

@@ -4,11 +4,11 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "build square edition",
             "type": "shell",
             "command": "sdcc",
             "args": [
-                "${workspaceRoot}/tnze.c"
+                "${workspaceRoot}/SquareEdition.c"
             ],
             "options": {
                 "cwd": "${workspaceRoot}/bin"
@@ -16,13 +16,13 @@
             "problemMatcher": []
         },
         {
-            "label": "build HEX",
+            "label": "pack HEX square edition",
             "type": "shell",
             "command": "packihx",
             "args": [
-                "${workspaceRoot}/bin/tnze.ihx",
+                "${workspaceRoot}/bin/SquareEdition.ihx",
                 ">",
-                "${workspaceRoot}/bin/tnze.hex"
+                "${workspaceRoot}/bin/SquareEdition.hex"
             ],
             "options": {
                 "cwd": "${workspaceRoot}/bin"
@@ -31,45 +31,6 @@
             "dependsOn": [
                 "build"
             ]
-        },
-        {
-            "label": "download",
-            "type": "shell",
-            "command": "python",
-            "args": [
-                "/Users/Tnze/Documents/projects/51/tools/stcflash.py",
-                "--port",
-                "/dev/tty.wchusbserial1420",
-                "--lowbaud",
-                "19200",
-                "--protocol",
-                "89",
-                "${workspaceRoot}/bin/tnze.ihx"
-            ],
-            "options": {
-                "cwd": "${workspaceRoot}/bin/"
-            },
-            "problemMatcher": [],
-            "dependsOn": [
-                "build"
-            ]
-        },
-        {
-            "label": "read message",
-            "type": "shell",
-            "command": "python",
-            "args": [
-                "/Users/Tnze/Documents/projects/51/tools/stcflash.py",
-                "--port",
-                "/dev/tty.wchusbserial1420",
-                "--lowbaud",
-                "19200"
-            ],
-            "options": {
-                "cwd": "${workspaceRoot}/bin/"
-            },
-            "problemMatcher": [],
-            "dependsOn": []
         }
     ]
 }

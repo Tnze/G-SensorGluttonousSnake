@@ -1,6 +1,6 @@
 XH3
 H 1C areas 90 global symbols
-M tnze
+M SquareEdition
 O -mmcs51 --model-small
 S _EXEN2 Def0000CB
 S _SP Def000081

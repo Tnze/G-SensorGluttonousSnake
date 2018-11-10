@@ -1,7 +1,8 @@
 /*
     file:   tnze.c
     author: Tnze
-    func:   Cube Glutton Snake
+    func:   Square Glutton Snake
+    MCU:    STC89C52RC
 */
 #include <8052.h>
 #define DIN P2_0 //定义数据输入口

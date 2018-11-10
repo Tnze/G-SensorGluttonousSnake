@@ -94,54 +94,54 @@ Area                                    Addr        Size        Decimal Bytes (A
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
      00000000  .__.ABS.                           _startup
-     00000080  _P0                                tnze
-     00000080  _P0_0                              tnze
-     00000081  _P0_1                              tnze
-     00000081  _SP                                tnze
-     00000082  _DPL                               tnze
-     00000082  _P0_2                              tnze
-     00000083  _DPH                               tnze
-     00000083  _P0_3                              tnze
-     00000084  _P0_4                              tnze
-     00000085  _P0_5                              tnze
-     00000086  _P0_6                              tnze
-     00000087  _P0_7                              tnze
-     00000087  _PCON                              tnze
-     00000088  _IT0                               tnze
-     00000088  _TCON                              tnze
-     00000089  _IE0                               tnze
-     00000089  _TMOD                              tnze
-     0000008A  _IT1                               tnze
-     0000008A  _TL0                               tnze
-     0000008B  _IE1                               tnze
-     0000008B  _TL1                               tnze
-     0000008C  _TH0                               tnze
-     0000008C  _TR0                               tnze
-     0000008D  _TF0                               tnze
-     0000008D  _TH1                               tnze
-     0000008E  _TR1                               tnze
-     0000008F  _TF1                               tnze
-     00000090  _P1                                tnze
-     00000090  _P1_0                              tnze
-     00000091  _P1_1                              tnze
-     00000092  _P1_2                              tnze
-     00000093  _P1_3                              tnze
-     00000094  _P1_4                              tnze
-     00000095  _P1_5                              tnze
-     00000096  _P1_6                              tnze
-     00000097  _P1_7                              tnze
-     00000098  _RI                                tnze
-     00000098  _SCON                              tnze
-     00000099  _SBUF                              tnze
-     00000099  _TI                                tnze
-     0000009A  _RB8                               tnze
-     0000009B  _TB8                               tnze
-     0000009C  _REN                               tnze
-     0000009D  _SM2                               tnze
-     0000009E  _SM1                               tnze
-     0000009F  _SM0                               tnze
-     000000A0  _P2                                tnze
-     000000A0  _P2_0                              tnze
+     00000080  _P0                                SquareEdition
+     00000080  _P0_0                              SquareEdition
+     00000081  _P0_1                              SquareEdition
+     00000081  _SP                                SquareEdition
+     00000082  _DPL                               SquareEdition
+     00000082  _P0_2                              SquareEdition
+     00000083  _DPH                               SquareEdition
+     00000083  _P0_3                              SquareEdition
+     00000084  _P0_4                              SquareEdition
+     00000085  _P0_5                              SquareEdition
+     00000086  _P0_6                              SquareEdition
+     00000087  _P0_7                              SquareEdition
+     00000087  _PCON                              SquareEdition
+     00000088  _IT0                               SquareEdition
+     00000088  _TCON                              SquareEdition
+     00000089  _IE0                               SquareEdition
+     00000089  _TMOD                              SquareEdition
+     0000008A  _IT1                               SquareEdition
+     0000008A  _TL0                               SquareEdition
+     0000008B  _IE1                               SquareEdition
+     0000008B  _TL1                               SquareEdition
+     0000008C  _TH0                               SquareEdition
+     0000008C  _TR0                               SquareEdition
+     0000008D  _TF0                               SquareEdition
+     0000008D  _TH1                               SquareEdition
+     0000008E  _TR1                               SquareEdition
+     0000008F  _TF1                               SquareEdition
+     00000090  _P1                                SquareEdition
+     00000090  _P1_0                              SquareEdition
+     00000091  _P1_1                              SquareEdition
+     00000092  _P1_2                              SquareEdition
+     00000093  _P1_3                              SquareEdition
+     00000094  _P1_4                              SquareEdition
+     00000095  _P1_5                              SquareEdition
+     00000096  _P1_6                              SquareEdition
+     00000097  _P1_7                              SquareEdition
+     00000098  _RI                                SquareEdition
+     00000098  _SCON                              SquareEdition
+     00000099  _SBUF                              SquareEdition
+     00000099  _TI                                SquareEdition
+     0000009A  _RB8                               SquareEdition
+     0000009B  _TB8                               SquareEdition
+     0000009C  _REN                               SquareEdition
+     0000009D  _SM2                               SquareEdition
+     0000009E  _SM1                               SquareEdition
+     0000009F  _SM0                               SquareEdition
+     000000A0  _P2                                SquareEdition
+     000000A0  _P2_0                              SquareEdition
      000000A0  __XPAGE                            
 ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
 Hexadecimal  [32-Bits]
@@ -152,57 +152,57 @@ Area                                    Addr        Size        Decimal Bytes (A
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     000000A1  _P2_1                              tnze
-     000000A2  _P2_2                              tnze
-     000000A3  _P2_3                              tnze
-     000000A4  _P2_4                              tnze
-     000000A5  _P2_5                              tnze
-     000000A6  _P2_6                              tnze
-     000000A7  _P2_7                              tnze
-     000000A8  _EX0                               tnze
-     000000A8  _IE                                tnze
-     000000A9  _ET0                               tnze
-     000000AA  _EX1                               tnze
-     000000AB  _ET1                               tnze
-     000000AC  _ES                                tnze
-     000000AD  _ET2                               tnze
-     000000AF  _EA                                tnze
-     000000B0  _P3                                tnze
-     000000B0  _P3_0                              tnze
-     000000B0  _RXD                               tnze
-     000000B1  _P3_1                              tnze
-     000000B1  _TXD                               tnze
-     000000B2  _INT0                              tnze
-     000000B2  _P3_2                              tnze
-     000000B3  _INT1                              tnze
-     000000B3  _P3_3                              tnze
-     000000B4  _P3_4                              tnze
-     000000B4  _T0                                tnze
-     000000B5  _P3_5                              tnze
-     000000B5  _T1                                tnze
-     000000B6  _P3_6                              tnze
-     000000B6  _WR                                tnze
-     000000B7  _P3_7                              tnze
-     000000B7  _RD                                tnze
-     000000B8  _IP                                tnze
-     000000B8  _PX0                               tnze
-     000000B9  _PT0                               tnze
-     000000BA  _PX1                               tnze
-     000000BB  _PT1                               tnze
-     000000BC  _PS                                tnze
-     000000BD  _PT2                               tnze
-     000000C8  _CP_RL2                            tnze
-     000000C8  _T2CON                             tnze
-     000000C8  _T2CON_0                           tnze
-     000000C9  _C_T2                              tnze
-     000000C9  _T2CON_1                           tnze
-     000000CA  _RCAP2L                            tnze
-     000000CA  _T2CON_2                           tnze
-     000000CA  _TR2                               tnze
-     000000CB  _EXEN2                             tnze
-     000000CB  _RCAP2H                            tnze
-     000000CB  _T2CON_3                           tnze
-     000000CC  _T2CON_4                           tnze
+     000000A1  _P2_1                              SquareEdition
+     000000A2  _P2_2                              SquareEdition
+     000000A3  _P2_3                              SquareEdition
+     000000A4  _P2_4                              SquareEdition
+     000000A5  _P2_5                              SquareEdition
+     000000A6  _P2_6                              SquareEdition
+     000000A7  _P2_7                              SquareEdition
+     000000A8  _EX0                               SquareEdition
+     000000A8  _IE                                SquareEdition
+     000000A9  _ET0                               SquareEdition
+     000000AA  _EX1                               SquareEdition
+     000000AB  _ET1                               SquareEdition
+     000000AC  _ES                                SquareEdition
+     000000AD  _ET2                               SquareEdition
+     000000AF  _EA                                SquareEdition
+     000000B0  _P3                                SquareEdition
+     000000B0  _P3_0                              SquareEdition
+     000000B0  _RXD                               SquareEdition
+     000000B1  _P3_1                              SquareEdition
+     000000B1  _TXD                               SquareEdition
+     000000B2  _INT0                              SquareEdition
+     000000B2  _P3_2                              SquareEdition
+     000000B3  _INT1                              SquareEdition
+     000000B3  _P3_3                              SquareEdition
+     000000B4  _P3_4                              SquareEdition
+     000000B4  _T0                                SquareEdition
+     000000B5  _P3_5                              SquareEdition
+     000000B5  _T1                                SquareEdition
+     000000B6  _P3_6                              SquareEdition
+     000000B6  _WR                                SquareEdition
+     000000B7  _P3_7                              SquareEdition
+     000000B7  _RD                                SquareEdition
+     000000B8  _IP                                SquareEdition
+     000000B8  _PX0                               SquareEdition
+     000000B9  _PT0                               SquareEdition
+     000000BA  _PX1                               SquareEdition
+     000000BB  _PT1                               SquareEdition
+     000000BC  _PS                                SquareEdition
+     000000BD  _PT2                               SquareEdition
+     000000C8  _CP_RL2                            SquareEdition
+     000000C8  _T2CON                             SquareEdition
+     000000C8  _T2CON_0                           SquareEdition
+     000000C9  _C_T2                              SquareEdition
+     000000C9  _T2CON_1                           SquareEdition
+     000000CA  _RCAP2L                            SquareEdition
+     000000CA  _T2CON_2                           SquareEdition
+     000000CA  _TR2                               SquareEdition
+     000000CB  _EXEN2                             SquareEdition
+     000000CB  _RCAP2H                            SquareEdition
+     000000CB  _T2CON_3                           SquareEdition
+     000000CC  _T2CON_4                           SquareEdition
 ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
 Hexadecimal  [32-Bits]
 
@@ -212,26 +212,26 @@ Area                                    Addr        Size        Decimal Bytes (A
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     000000CC  _TCLK                              tnze
-     000000CC  _TL2                               tnze
-     000000CD  _RCLK                              tnze
-     000000CD  _T2CON_5                           tnze
-     000000CD  _TH2                               tnze
-     000000CE  _EXF2                              tnze
-     000000CE  _T2CON_6                           tnze
-     000000CF  _T2CON_7                           tnze
-     000000CF  _TF2                               tnze
-     000000D0  _P                                 tnze
-     000000D0  _PSW                               tnze
-     000000D1  _F1                                tnze
-     000000D2  _OV                                tnze
-     000000D3  _RS0                               tnze
-     000000D4  _RS1                               tnze
-     000000D5  _F0                                tnze
-     000000D6  _AC                                tnze
-     000000D7  _CY                                tnze
-     000000E0  _ACC                               tnze
-     000000F0  _B                                 tnze
+     000000CC  _TCLK                              SquareEdition
+     000000CC  _TL2                               SquareEdition
+     000000CD  _RCLK                              SquareEdition
+     000000CD  _T2CON_5                           SquareEdition
+     000000CD  _TH2                               SquareEdition
+     000000CE  _EXF2                              SquareEdition
+     000000CE  _T2CON_6                           SquareEdition
+     000000CF  _T2CON_7                           SquareEdition
+     000000CF  _TF2                               SquareEdition
+     000000D0  _P                                 SquareEdition
+     000000D0  _PSW                               SquareEdition
+     000000D1  _F1                                SquareEdition
+     000000D2  _OV                                SquareEdition
+     000000D3  _RS0                               SquareEdition
+     000000D4  _RS1                               SquareEdition
+     000000D5  _F0                                SquareEdition
+     000000D6  _AC                                SquareEdition
+     000000D7  _CY                                SquareEdition
+     000000E0  _ACC                               SquareEdition
+     000000F0  _B                                 SquareEdition
      000000F5  _B_5                               _gptrput
      000000F6  _B_6                               _gptrput
      000000F7  _B_7                               _gptrput
@@ -263,11 +263,11 @@ DSEG                                00000000    00000069 =         105. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00000021  _Write_Max7219_PARM_2              tnze
-     00000022  _leds                              tnze
-     0000002A  _snake                             tnze
-     0000006A  _snake_len                         tnze
-     0000006C  _food                              tnze
+     00000021  _Write_Max7219_PARM_2              SquareEdition
+     00000022  _leds                              SquareEdition
+     0000002A  _snake                             SquareEdition
+     0000006A  _snake_len                         SquareEdition
+     0000006C  _food                              SquareEdition
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
 Hexadecimal  [32-Bits]
@@ -289,7 +289,7 @@ SSEG                                0000006E    00000092 =         146. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     0000006E  __start__stack                     tnze
+     0000006E  __start__stack                     SquareEdition
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
 Hexadecimal  [32-Bits]
@@ -300,7 +300,7 @@ HOME                                00000000    00000006 =           6. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000003  __sdcc_program_startup             tnze
+C:   00000003  __sdcc_program_startup             SquareEdition
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
 Hexadecimal  [32-Bits]
@@ -372,18 +372,18 @@ CSEG                                00000068    00000249 =         585. bytes (R
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-C:   00000068  _Delay_xms                         tnze
-C:   00000093  _Write_Max7219_byte                tnze
-C:   000000AF  _Write_Max7219                     tnze
-C:   000000C1  _Init_Max7219                      tnze
-C:   000000EE  _printLEDs                         tnze
-C:   00000136  _reset                             tnze
-C:   00000137  _nextCell                          tnze
-C:   00000182  _setFood                           tnze
-C:   00000183  _moveSnake                         tnze
-C:   000001AC  _step                              tnze
-C:   00000203  _snake_to_LED                      tnze
-C:   00000274  _main                              tnze
+C:   00000068  _Delay_xms                         SquareEdition
+C:   00000093  _Write_Max7219_byte                SquareEdition
+C:   000000AF  _Write_Max7219                     SquareEdition
+C:   000000C1  _Init_Max7219                      SquareEdition
+C:   000000EE  _printLEDs                         SquareEdition
+C:   00000136  _reset                             SquareEdition
+C:   00000137  _nextCell                          SquareEdition
+C:   00000182  _setFood                           SquareEdition
+C:   00000183  _moveSnake                         SquareEdition
+C:   000001AC  _step                              SquareEdition
+C:   00000203  _snake_to_LED                      SquareEdition
+C:   00000274  _main                              SquareEdition
 C:   00000292  __gptrput                          _gptrput
 C:   000002AD  __sdcc_external_startup            _startup
 
@@ -391,7 +391,7 @@ C:   000002AD  __sdcc_external_startup            _startup
 
 Files Linked                              [ module(s) ]
 
-tnze.rel                                  [  ]
+SquareEdition.rel                         [  ]
 
 
 Libraries Linked                          [ object file ]

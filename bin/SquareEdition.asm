@@ -2,7 +2,7 @@
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.7.0 #10231 (Mac OS X x86_64)
 ;--------------------------------------------------------
-	.module tnze
+	.module SquareEdition
 	.optsdcc -mmcs51 --model-small
 	
 ;--------------------------------------------------------
@@ -369,7 +369,7 @@ __interrupt_vect:
 	.globl __mcs51_genXINIT
 	.globl __mcs51_genXRAMCLEAR
 	.globl __mcs51_genRAMCLEAR
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:60: int snake_len = 1; //贪吃蛇长度
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:61: int snake_len = 1; //贪吃蛇长度
 	mov	_snake_len,#0x01
 	mov	(_snake_len + 1),#0x00
 	.area GSFINAL (CODE)
@@ -393,7 +393,7 @@ __sdcc_program_startup:
 ;i                         Allocated to registers r4 r5 
 ;j                         Allocated to registers r2 r3 
 ;------------------------------------------------------------
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:15: void Delay_xms(unsigned int x)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:16: void Delay_xms(unsigned int x)
 ;	-----------------------------------------
 ;	 function Delay_xms
 ;	-----------------------------------------
@@ -408,7 +408,7 @@ _Delay_xms:
 	ar0 = 0x00
 	mov	r6,dpl
 	mov	r7,dph
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:18: for (i = 0; i < x; i++)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:19: for (i = 0; i < x; i++)
 	mov	r4,#0x00
 	mov	r5,#0x00
 00107$:
@@ -418,7 +418,7 @@ _Delay_xms:
 	mov	a,r5
 	subb	a,r7
 	jnc	00109$
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:19: for (j = 0; j < 112; j++)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:20: for (j = 0; j < 112; j++)
 	mov	r2,#0x70
 	mov	r3,#0x00
 00105$:
@@ -433,13 +433,13 @@ _Delay_xms:
 	mov	a,r0
 	orl	a,r1
 	jnz	00105$
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:18: for (i = 0; i < x; i++)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:19: for (i = 0; i < x; i++)
 	inc	r4
 	cjne	r4,#0x00,00107$
 	inc	r5
 	sjmp	00107$
 00109$:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:21: }
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:22: }
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Write_Max7219_byte'
@@ -447,41 +447,41 @@ _Delay_xms:
 ;DATA                      Allocated to registers r7 
 ;i                         Allocated to registers r6 
 ;------------------------------------------------------------
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:24: void Write_Max7219_byte(unsigned char DATA)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:25: void Write_Max7219_byte(unsigned char DATA)
 ;	-----------------------------------------
 ;	 function Write_Max7219_byte
 ;	-----------------------------------------
 _Write_Max7219_byte:
 	mov	r7,dpl
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:27: CS = 0;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:28: CS = 0;
 ;	assignBit
 	clr	_P2_1
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:28: for (i = 8; i >= 1; i--)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:29: for (i = 8; i >= 1; i--)
 	mov	r6,#0x08
 00102$:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:30: CLK = 0;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:31: CLK = 0;
 ;	assignBit
 	clr	_P2_2
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:31: DIN = DATA & 0x80;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:32: DIN = DATA & 0x80;
 	mov	a,r7
 	rlc	a
 ;	assignBit
 	mov  _Write_Max7219_byte_sloc0_1_0,c
 	mov	_P2_0,c
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:32: DATA = DATA << 1;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:33: DATA = DATA << 1;
 	mov	ar5,r7
 	mov	a,r5
 	add	a,r5
 	mov	r7,a
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:33: CLK = 1;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:34: CLK = 1;
 ;	assignBit
 	setb	_P2_2
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:28: for (i = 8; i >= 1; i--)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:29: for (i = 8; i >= 1; i--)
 	dec	r6
 	cjne	r6,#0x01,00110$
 00110$:
 	jnc	00102$
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:35: }
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:36: }
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Write_Max7219'
@@ -489,105 +489,105 @@ _Write_Max7219_byte:
 ;dat                       Allocated with name '_Write_Max7219_PARM_2'
 ;address                   Allocated to registers r7 
 ;------------------------------------------------------------
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:38: void Write_Max7219(unsigned char address, unsigned char dat)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:39: void Write_Max7219(unsigned char address, unsigned char dat)
 ;	-----------------------------------------
 ;	 function Write_Max7219
 ;	-----------------------------------------
 _Write_Max7219:
 	mov	r7,dpl
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:40: CS = 0;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:41: CS = 0;
 ;	assignBit
 	clr	_P2_1
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:41: Write_Max7219_byte(address); //写入地址，即数码管编号
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:42: Write_Max7219_byte(address); //写入地址，即数码管编号
 	mov	dpl,r7
 	lcall	_Write_Max7219_byte
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:42: Write_Max7219_byte(dat);     //写入数据，即数码管显示数字
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:43: Write_Max7219_byte(dat);     //写入数据，即数码管显示数字
 	mov	dpl,_Write_Max7219_PARM_2
 	lcall	_Write_Max7219_byte
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:43: CS = 1;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:44: CS = 1;
 ;	assignBit
 	setb	_P2_1
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:44: }
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:45: }
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Init_Max7219'
 ;------------------------------------------------------------
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:47: void Init_Max7219(void)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:48: void Init_Max7219(void)
 ;	-----------------------------------------
 ;	 function Init_Max7219
 ;	-----------------------------------------
 _Init_Max7219:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:49: Write_Max7219(0x09, 0x00); //译码方式：No decode
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:50: Write_Max7219(0x09, 0x00); //译码方式：No decode
 	mov	_Write_Max7219_PARM_2,#0x00
 	mov	dpl,#0x09
 	lcall	_Write_Max7219
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:50: Write_Max7219(0x0a, 0x03); //亮度
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:51: Write_Max7219(0x0a, 0x03); //亮度
 	mov	_Write_Max7219_PARM_2,#0x03
 	mov	dpl,#0x0a
 	lcall	_Write_Max7219
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:51: Write_Max7219(0x0b, 0x07); //扫描界限；8个数码管显示
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:52: Write_Max7219(0x0b, 0x07); //扫描界限；8个数码管显示
 	mov	_Write_Max7219_PARM_2,#0x07
 	mov	dpl,#0x0b
 	lcall	_Write_Max7219
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:52: Write_Max7219(0x0c, 0x01); //掉电模式：0，普通模式：1
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:53: Write_Max7219(0x0c, 0x01); //掉电模式：0，普通模式：1
 	mov	_Write_Max7219_PARM_2,#0x01
 	mov	dpl,#0x0c
 	lcall	_Write_Max7219
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:53: Write_Max7219(0x0f, 0x00); //显示测试：1；测试结束，正常显示：0
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:54: Write_Max7219(0x0f, 0x00); //显示测试：1；测试结束，正常显示：0
 	mov	_Write_Max7219_PARM_2,#0x00
 	mov	dpl,#0x0f
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:54: }
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:55: }
 	ljmp	_Write_Max7219
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'printLEDs'
 ;------------------------------------------------------------
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:63: void printLEDs()
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:64: void printLEDs()
 ;	-----------------------------------------
 ;	 function printLEDs
 ;	-----------------------------------------
 _printLEDs:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:65: Write_Max7219(0x01, leds[0]);
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:66: Write_Max7219(0x01, leds[0]);
 	mov	_Write_Max7219_PARM_2,_leds
 	mov	dpl,#0x01
 	lcall	_Write_Max7219
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:66: Write_Max7219(0x02, leds[1]);
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:67: Write_Max7219(0x02, leds[1]);
 	mov	_Write_Max7219_PARM_2,(_leds + 0x0001)
 	mov	dpl,#0x02
 	lcall	_Write_Max7219
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:67: Write_Max7219(0x03, leds[2]);
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:68: Write_Max7219(0x03, leds[2]);
 	mov	_Write_Max7219_PARM_2,(_leds + 0x0002)
 	mov	dpl,#0x03
 	lcall	_Write_Max7219
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:68: Write_Max7219(0x04, leds[3]);
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:69: Write_Max7219(0x04, leds[3]);
 	mov	_Write_Max7219_PARM_2,(_leds + 0x0003)
 	mov	dpl,#0x04
 	lcall	_Write_Max7219
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:70: Write_Max7219(0x05, leds[4]);
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:71: Write_Max7219(0x05, leds[4]);
 	mov	_Write_Max7219_PARM_2,(_leds + 0x0004)
 	mov	dpl,#0x05
 	lcall	_Write_Max7219
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:71: Write_Max7219(0x06, leds[5]);
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:72: Write_Max7219(0x06, leds[5]);
 	mov	_Write_Max7219_PARM_2,(_leds + 0x0005)
 	mov	dpl,#0x06
 	lcall	_Write_Max7219
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:72: Write_Max7219(0x07, leds[6]);
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:73: Write_Max7219(0x07, leds[6]);
 	mov	_Write_Max7219_PARM_2,(_leds + 0x0006)
 	mov	dpl,#0x07
 	lcall	_Write_Max7219
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:73: Write_Max7219(0x08, leds[7]);
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:74: Write_Max7219(0x08, leds[7]);
 	mov	_Write_Max7219_PARM_2,(_leds + 0x0007)
 	mov	dpl,#0x08
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:74: }
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:75: }
 	ljmp	_Write_Max7219
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'reset'
 ;------------------------------------------------------------
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:77: void reset()
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:78: void reset()
 ;	-----------------------------------------
 ;	 function reset
 ;	-----------------------------------------
 _reset:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:80: }
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:81: }
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'nextCell'
@@ -595,7 +595,7 @@ _reset:
 ;next                      Allocated to registers r5 r6 r7 
 ;head                      Allocated to registers r4 
 ;------------------------------------------------------------
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:85: void nextCell(char *next)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:86: void nextCell(char *next)
 ;	-----------------------------------------
 ;	 function nextCell
 ;	-----------------------------------------
@@ -603,17 +603,17 @@ _nextCell:
 	mov	r5,dpl
 	mov	r6,dph
 	mov	r7,b
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:87: char head = snake[snake_len - 1];
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:88: char head = snake[snake_len - 1];
 	mov	a,_snake_len
 	dec	a
 	add	a,#_snake
 	mov	r1,a
 	mov	ar4,@r1
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:88: if (SW1)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:89: if (SW1)
 	jnb	_P1_3,00108$
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:89: if (SW2)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:90: if (SW2)
 	jnb	_P1_4,00102$
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:90: *next = head - 1;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:91: *next = head - 1;
 	mov	ar3,r4
 	dec	r3
 	mov	dpl,r5
@@ -622,7 +622,7 @@ _nextCell:
 	mov	a,r3
 	ljmp	__gptrput
 00102$:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:92: *next = head - 0b10000;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:93: *next = head - 0b10000;
 	mov	ar3,r4
 	mov	a,r3
 	add	a,#0xf0
@@ -631,9 +631,9 @@ _nextCell:
 	mov	b,r7
 	ljmp	__gptrput
 00108$:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:95: if (SW2)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:96: if (SW2)
 	jnb	_P1_4,00105$
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:96: *next = head + 0b10000;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:97: *next = head + 0b10000;
 	mov	ar3,r4
 	mov	a,#0x10
 	add	a,r3
@@ -642,35 +642,35 @@ _nextCell:
 	mov	b,r7
 	ljmp	__gptrput
 00105$:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:98: *next = head + 1;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:99: *next = head + 1;
 	inc	r4
 	mov	dpl,r5
 	mov	dph,r6
 	mov	b,r7
 	mov	a,r4
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:100: }
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:101: }
 	ljmp	__gptrput
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'setFood'
 ;------------------------------------------------------------
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:102: void setFood()
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:103: void setFood()
 ;	-----------------------------------------
 ;	 function setFood
 ;	-----------------------------------------
 _setFood:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:105: }
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:106: }
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'moveSnake'
 ;------------------------------------------------------------
 ;i                         Allocated to registers 
 ;------------------------------------------------------------
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:107: void moveSnake()
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:108: void moveSnake()
 ;	-----------------------------------------
 ;	 function moveSnake
 ;	-----------------------------------------
 _moveSnake:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:109: for (int i = snake_len; i > 0; i--)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:110: for (int i = snake_len; i > 0; i--)
 	mov	r6,_snake_len
 	mov	r7,(_snake_len + 1)
 00103$:
@@ -682,7 +682,7 @@ _moveSnake:
 	xrl	b,#0x80
 	subb	a,b
 	jnc	00105$
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:110: snake[i] = snake[i - 1];
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:111: snake[i] = snake[i - 1];
 	mov	a,r6
 	add	a,#_snake
 	mov	r1,a
@@ -693,14 +693,14 @@ _moveSnake:
 	mov	r0,a
 	mov	ar5,@r0
 	mov	@r1,ar5
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:109: for (int i = snake_len; i > 0; i--)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:110: for (int i = snake_len; i > 0; i--)
 	dec	r6
 	cjne	r6,#0xff,00115$
 	dec	r7
 00115$:
 	sjmp	00103$
 00105$:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:111: }
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:112: }
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'step'
@@ -708,16 +708,16 @@ _moveSnake:
 ;next                      Allocated with name '_step_next_1_23'
 ;i                         Allocated to registers r6 r7 
 ;------------------------------------------------------------
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:114: void step()
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:115: void step()
 ;	-----------------------------------------
 ;	 function step
 ;	-----------------------------------------
 _step:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:117: nextCell(&next);
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:118: nextCell(&next);
 	mov	dptr,#_step_next_1_23
 	mov	b,#0x40
 	lcall	_nextCell
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:120: for (int i = 0; i < snake_len; i++)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:121: for (int i = 0; i < snake_len; i++)
 	mov	r6,#0x00
 	mov	r7,#0x00
 00108$:
@@ -730,48 +730,48 @@ _step:
 	xrl	b,#0x80
 	subb	a,b
 	jnc	00103$
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:121: if (snake[i] == next) //咬到自己了
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:122: if (snake[i] == next) //咬到自己了
 	mov	a,r6
 	add	a,#_snake
 	mov	r1,a
 	mov	a,@r1
 	mov	r5,a
 	cjne	a,_step_next_1_23,00109$
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:122: reset();
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:123: reset();
 	push	ar7
 	push	ar6
 	lcall	_reset
 	pop	ar6
 	pop	ar7
 00109$:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:120: for (int i = 0; i < snake_len; i++)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:121: for (int i = 0; i < snake_len; i++)
 	inc	r6
 	cjne	r6,#0x00,00108$
 	inc	r7
 	sjmp	00108$
 00103$:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:125: if (food == next)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:126: if (food == next)
 	mov	a,_step_next_1_23
 	cjne	a,_food,00105$
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:127: setFood();
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:128: setFood();
 	lcall	_setFood
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:128: moveSnake();
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:129: moveSnake();
 	lcall	_moveSnake
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:129: snake[0] = next;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:130: snake[0] = next;
 	mov	_snake,_step_next_1_23
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:130: snake_len++;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:131: snake_len++;
 	inc	_snake_len
 	clr	a
 	cjne	a,_snake_len,00110$
 	inc	(_snake_len + 1)
 	ret
 00105$:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:134: moveSnake();
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:135: moveSnake();
 	lcall	_moveSnake
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:135: snake[0] = next;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:136: snake[0] = next;
 	mov	_snake,_step_next_1_23
 00110$:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:137: }
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:138: }
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'snake_to_LED'
@@ -779,12 +779,12 @@ _step:
 ;i                         Allocated to registers r6 r7 
 ;i                         Allocated to registers r6 r7 
 ;------------------------------------------------------------
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:139: void snake_to_LED()
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:140: void snake_to_LED()
 ;	-----------------------------------------
 ;	 function snake_to_LED
 ;	-----------------------------------------
 _snake_to_LED:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:141: for (int i = 0; i < 8; i++) //先熄灭所有灯
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:142: for (int i = 0; i < 8; i++) //先熄灭所有灯
 	mov	r6,#0x00
 	mov	r7,#0x00
 00104$:
@@ -795,18 +795,18 @@ _snake_to_LED:
 	xrl	a,#0x80
 	subb	a,#0x80
 	jnc	00101$
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:142: leds[i] = 0;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:143: leds[i] = 0;
 	mov	a,r6
 	add	a,#_leds
 	mov	r0,a
 	mov	@r0,#0x00
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:141: for (int i = 0; i < 8; i++) //先熄灭所有灯
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:142: for (int i = 0; i < 8; i++) //先熄灭所有灯
 	inc	r6
 	cjne	r6,#0x00,00104$
 	inc	r7
 	sjmp	00104$
 00101$:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:143: for (int i = 0; i < snake_len; i++) //有蛇的位置点亮
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:144: for (int i = 0; i < snake_len; i++) //有蛇的位置点亮
 	mov	r6,#0x00
 	mov	r7,#0x00
 00107$:
@@ -819,7 +819,7 @@ _snake_to_LED:
 	xrl	b,#0x80
 	subb	a,b
 	jnc	00109$
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:144: leds[snake[i] & 0b1111] |= 0b10000000 >> (snake[i] >> 4);
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:145: leds[snake[i] & 0b1111] |= 0b10000000 >> (snake[i] >> 4);
 	mov	a,r6
 	add	a,#_snake
 	mov	r1,a
@@ -858,46 +858,46 @@ _snake_to_LED:
 	mov	a,r2
 	orl	ar3,a
 	mov	@r1,ar5
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:143: for (int i = 0; i < snake_len; i++) //有蛇的位置点亮
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:144: for (int i = 0; i < snake_len; i++) //有蛇的位置点亮
 	inc	r6
 	cjne	r6,#0x00,00107$
 	inc	r7
 	sjmp	00107$
 00109$:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:145: }
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:146: }
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'main'
 ;------------------------------------------------------------
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:147: void main()
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:148: void main()
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:150: SW1 = 1;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:151: SW1 = 1;
 ;	assignBit
 	setb	_P1_3
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:151: SW2 = 1;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:152: SW2 = 1;
 ;	assignBit
 	setb	_P1_4
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:153: Init_Max7219();
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:154: Init_Max7219();
 	lcall	_Init_Max7219
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:154: setFood();
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:155: setFood();
 	lcall	_setFood
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:155: snake[0] = (3 << 4) + 5;
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:156: snake[0] = (3 << 4) + 5;
 	mov	_snake,#0x35
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:156: while (1)
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:157: while (1)
 00102$:
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:158: snake_to_LED();
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:159: snake_to_LED();
 	lcall	_snake_to_LED
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:159: printLEDs();
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:160: printLEDs();
 	lcall	_printLEDs
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:160: Delay_xms(500);
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:161: Delay_xms(500);
 	mov	dptr,#0x01f4
 	lcall	_Delay_xms
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:161: step();
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:162: step();
 	lcall	_step
-;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/tnze.c:163: }
+;	/Users/Tnze/Documents/projects/51/CubeGluttonousSnake/SquareEdition.c:164: }
 	sjmp	00102$
 	.area CSEG    (CODE)
 	.area CONST   (CODE)
